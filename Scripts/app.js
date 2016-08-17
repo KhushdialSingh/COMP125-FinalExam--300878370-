@@ -1,3 +1,7 @@
+/*
+    Khushdial Singh - 300878370
+*/
+
 var core;
 
 
@@ -101,14 +105,6 @@ var core;
     });
     
     
-/*      var imageObj = new Image();
-
-      imageObj.onload = function() {
-        context.drawImage(imageObj, 69, 50);
-        context.drawImage(imageObj, 350, 50);
-      };
-      imageObj.src = './Assets/images/blank.png';
-*/
     }
     window.addEventListener("load", init);
 })(core || (core = {}));
