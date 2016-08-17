@@ -1,6 +1,9 @@
 var core;
+
+
+
 (function (core) {
-    "use strict";
+    
     var canvas;
     var stage;
     // app entry function
@@ -9,17 +12,25 @@ var core;
         stage = new createjs.Stage(canvas);
         stage.enableMouseOver(20);
         createjs.Ticker.framerate = 60;
-        createjs.Ticker.on("tick", gameLoop);
+       // createjs.Ticker.on("tick", gameLoop);
         main();
     }
 
-    var c=document.getElementById("canvas");
-    var ctx=c.getContext("2d");
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var bitmap = new createjs.Bitmap("./Assets/images/blank.png");
+    //context.drawImage(bitmap, 69, 50);
+    createjs.Bitmap = bitmap;
+    /*var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
 
-    img = new Image();
-    img.src = '.\Assets\images\blank.png';
-    ctx.drawImage(img,10,10);
-
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 69, 50);
+        context.drawImage(imageObj, 350, 50);
+      };
+      imageObj.src = './Assets/images/blank.png';
+*/
 
     function gameLoop() {
         stage.update();
